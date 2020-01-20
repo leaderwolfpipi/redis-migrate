@@ -1,0 +1,13 @@
+## redis-migration迁移配置 ##
+---
+destType: 0  ## 0：cluster 集群 ；1：signle(agent) 单机（代理）
+sourceType: 0  ## 0：cluster 集群 ；1：signle(agent) 单机（代理）
+source:
+  host: vms-redis.4gf4xj.clustercfg.cnn1.cache.amazonaws.com.cn:6379
+  password: password
+destRedis:
+  host: 127.0.0.1:6379
+  password: password  
+scanCount: 20000 ## 单次扫描的数目
+logFile : /var/log/redis-migrate.log ## 配置日志文件
+...
